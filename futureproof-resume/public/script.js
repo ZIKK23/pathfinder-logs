@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingSection.classList.remove('hidden');
 
         try {
-            const response = await fetch('/api/analyze', {
+            const response = await fetch('/analyze', {
                 method: 'POST',
                 body: formData,
             });
