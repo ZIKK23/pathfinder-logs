@@ -51,9 +51,8 @@ app.post('/analyze', upload.single('cvFile'), async (req, res) => {
     }
 });
 
-/*app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Server berjalan di http://localhost:${port}`);
 });
-*/
 
-module.exports = app;
+/*module.exports = app;*/
