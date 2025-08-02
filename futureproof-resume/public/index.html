@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureProof Resumes - Modern CV Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">FutureProof Resumes 🚀</h1>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <main class="container">
+        <section id="input-section">
+            <div class="hero">
+                <h2>Stop Just Sending. Start Getting Noticed</h2>
+                <p>We help you discover and highlight your best potential, so your CV shines to recruiters</p>
+            </div>
+
+            <form id="cv-form">
+                <div class="form-step">
+                    <label>1. Select Your Desired Career Field</label>
+                    <div class="category-cards">
+                        <div class="category-card" data-category="IT">
+                            <i class="fas fa-code"></i> <span>Technology</span>
+                        </div>
+                        <div class="category-card" data-category="Marketing">
+                            <i class="fas fa-bullhorn"></i> <span>Marketing</span>
+                        </div>
+                        <div class="category-card" data-category="Finance">
+                            <i class="fas fa-chart-line"></i> <span>Finance</span>
+                        </div>
+                    </div>
+                    <input type="text" id="career-interest" name="careerInterest" placeholder="Example: IT - Web Developer" required>
+                </div>
+
+                <div class="form-step">
+                    <label for="cv-file-trigger">2. Upload Your CV</label>
+                    <button type="button" id="cv-file-trigger" class="upload-btn">
+                        <i class="fas fa-upload"></i> <span>Choose File</span>
+                    </button>
+                    <input type="file" id="cv-file" name="cvFile" accept=".pdf,.docx" required hidden>
+                    <p id="file-name-display"></p>
+                    <small class="info-text">Use an ATS-friendly format like PDF or DOCX (text-based, minimal graphics).</small>
+                </div>
+
+                <button type="submit" id="analyze-button" class="cta-button">
+                    <span>Analyze My CV</span> <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </section>
+
+        <section id="loading" class="hidden">
+            <div class="spinner"></div>
+            <p>AI is analyzing your CV...</p>
+        </section>
+
+        <section id="results-section" class="hidden">
+            <h2>Your Analysis Results</h2>
+            <div id="ai-output-container">
+                </div>
+            <button id="back-to-home" class="cta-button secondary">
+                <i class="fas fa-arrow-left"></i> <span>Analyze Another CV</span>
+            </button>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
